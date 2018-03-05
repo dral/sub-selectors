@@ -1,0 +1,23 @@
+{
+  "name": "sub-selectors",
+  "version": "0.1.0",
+  "description": "Transform redux sub-selectors for use higher in the state tree",
+  "main": "./distribution/index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "babel src --out-dir distribution",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "redux",
+    "selectors"
+  ],
+  "author": "Draltan MARIN <moi@draltan.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "jest": "22.4.2"
+  }
+}
