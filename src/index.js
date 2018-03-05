@@ -15,25 +15,24 @@ export const subSelector = (selector, stateKey) => (
 );
 
 /**
-  Apply subSelector op to an object of selectors.
+Transform redux sub-selectors for use higher in the state tree
 
-  ```
-  import {compose} from 'redux';
-  import myReducer, * as mySelectors from './myReducer';
+```
+import {combineReducers} from 'redux';
+import subSelectors from 'sub-selectors';
+import myReducer, * as mySelectors from './myReducer';
+// other reducers
+
+export default combineReducers({
+  myReducer,
   // other reducers
+});
 
-  const reducer = compose({
-    myReducer,
-    // other reducers
-  });
-
-  export const selectors = {
-    myReducer: subSelectors(mySelectors, 'myReducer'),
-    // selectors for other reducers
-  };
-
-  export default reducer;
-  ```
+export const selectors = {
+  myReducer: subSelectors(mySelectors, 'myReducer'),
+  // selectors for other reducers
+};
+```
 */
 const subSelectors = (selectors, stateKey) => {
   const result = {};
