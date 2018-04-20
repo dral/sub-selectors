@@ -1,6 +1,6 @@
 {
   "name": "sub-selectors",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Transform redux sub-selectors for use higher in the state tree",
   "main": "./distribution/index.js",
   "scripts": {
